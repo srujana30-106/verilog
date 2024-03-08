@@ -6,9 +6,9 @@ begin
 if (clr==1)
 q=4'b0000;
 else if(sel==0)
-q<=d;
+q<=d;//if sel is 0 dump d to output
 else
-q<=q>>1;
-assign v=q[0];
+q<=q>>1;//if sel is 1 right shift output by one bit
+    assign v=q[0];//lsb to output
 end
 endmodule
